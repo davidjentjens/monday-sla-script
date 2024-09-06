@@ -2,7 +2,7 @@ import cron from 'node-cron'
 
 import { startTimers, stopTimers } from './helpers/timers'
 
-console.log('Starting timer cron jobs...\n')
+console.log('[SETUP] Initializing cron jobs...\n')
 
 // Schedule the tasks to run at 9 AM and 5 PM on weekdays
 cron.schedule('0 9 * * 1-5', startTimers, {

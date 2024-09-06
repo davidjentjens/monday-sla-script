@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { API_TOKEN, BOARD_ID, MONDAY_API_URL } from '../config'
+import { API_KEY, BOARD_ID, MONDAY_API_URL } from '../config'
 import { Item } from '../interfaces'
 
 // Function to fetch items with "SLA Type: Business hours"
@@ -30,7 +30,7 @@ export const fetchBusinessHoursRows = async (): Promise<Item[]> => {
       },
       {
         headers: {
-          Authorization: API_TOKEN,
+          Authorization: API_KEY,
           'Content-Type': 'application/json',
         },
       },

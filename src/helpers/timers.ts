@@ -1,7 +1,7 @@
 // Import axios using ES Module syntax
 import axios from 'axios'
 import { fetchBusinessHoursRows } from './fetchBusinessHoursRows'
-import { API_TOKEN, BOARD_ID, MONDAY_API_URL } from '../config'
+import { API_KEY, BOARD_ID, MONDAY_API_URL } from '../config'
 
 // Function to start timers
 export const startTimers = async (): Promise<void> => {
@@ -22,7 +22,7 @@ export const startTimers = async (): Promise<void> => {
         },
         {
           headers: {
-            Authorization: API_TOKEN,
+            Authorization: API_KEY,
             'Content-Type': 'application/json',
           },
         },
@@ -58,7 +58,7 @@ export const stopTimers = async (): Promise<void> => {
         },
         {
           headers: {
-            Authorization: API_TOKEN,
+            Authorization: API_KEY,
             'Content-Type': 'application/json',
           },
         },
