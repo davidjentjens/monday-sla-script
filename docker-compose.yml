@@ -1,0 +1,12 @@
+services:
+  app:
+    container_name: monday-sla-cronjob
+    build:
+      context: .
+    ports:
+      - "3000:3000"  # Adjust this port if your app runs on a different port
+    env_file:
+      - .env  # Load environment variables from the .env file
+    volumes:
+      - .:/app  # Mount the current directory to /app inside the container (useful for local development)
+    command: npm start  # Command to run your app, change this if necessary
