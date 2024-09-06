@@ -30,3 +30,15 @@ Este projeto é uma aplicação Dockerizada em Node.js, desenvolvida com TypeScr
 - O `docker-compose.yml` gerencia a configuração dos serviços, incluindo a configuração das portas e o carregamento de variáveis de ambiente a partir de um arquivo `.env`.
 <br/>
 
+# Passos para Execução
+
+1. Clone o repositório para sua máquina local.
+2. Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis de ambiente:
+   ```
+   MONDAY_API_KEY=your_api_key
+   ```
+3. Substitua `your_api_key` pelo valor correspondentes da sua conta Monday.com.
+4. Execute o comando `docker-compose up` para iniciar a aplicação.
+5. A aplicação será executada em um container Docker e os timers serão iniciados e parados automaticamente nos horários programados.
+6. Para parar a aplicação, execute `docker-compose down`.
+<br/>
