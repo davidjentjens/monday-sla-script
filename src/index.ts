@@ -4,8 +4,8 @@ import { startTimers, stopTimers } from './helpers/timers'
 
 console.log('[SETUP] Initializing cron jobs...\n')
 
-// Schedule the tasks to run at 9 AM and 5 PM on weekdays
-cron.schedule('0 9 * * 1-5', startTimers, {
+// Schedule the tasks to run at 8 AM and 5 PM on weekdays
+cron.schedule('0 8 * * 1-5', startTimers, {
   timezone: 'America/Sao_Paulo',
 })
 
