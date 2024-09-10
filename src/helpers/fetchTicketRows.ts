@@ -2,12 +2,12 @@ import axios from 'axios'
 import { API_KEY, BOARD_ID, MONDAY_API_URL } from '../config'
 import { Item } from '../interfaces'
 
-// Function to fetch items with "SLA Type: Business hours"
-export const fetchBusinessHoursRows = async (): Promise<Item[]> => {
+// Function to fetch ticket rows
+export const fetchTicketRows = async (): Promise<Item[]> => {
   const query = `
       query {
-        boards (ids: [${BOARD_ID}]) {
-          items_page {
+        boards (ids: [${BOARD_ID}], limit: 1000) {
+          items_page (limit: 500) {
             items {
               id
               name
@@ -36,18 +36,12 @@ export const fetchBusinessHoursRows = async (): Promise<Item[]> => {
       },
     )
 
-    // Filter rows with SLA Type: Business hours
-    const items = data.data.boards[0].items_page.items
-    const businessHoursRows = items.filter((item: Item) => {
-      return item.column_values.some(
-        (column: any) =>
-          column.id === 'status_1__1' && column.text === 'Horas Comerciais',
-      ) // Adjust column ID accordingly
-    })
+    // Extract ticket rows from the response
+    const businessHoursRows = data.data.boards[0].items_page.items
 
     return businessHoursRows
   } catch (error) {
-    console.error('[ERROR] Error fetching business hours rows:', error)
+    console.error('[ERROR] Error fetching tickets for rows:', error)
     return []
   }
 }
