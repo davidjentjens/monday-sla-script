@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Step 6: Build the TypeScript application (if needed)
-RUN npm run build  # Ensure you have a build script for transpiling TypeScript in your package.json
+RUN npm run build
 
 # Step 7: Expose the port (if applicable)
 # EXPOSE 3000  # Uncomment this if your app runs on a specific port
