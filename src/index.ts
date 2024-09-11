@@ -13,4 +13,6 @@ cron.schedule('0 17 * * 1-5', stopBusinessHours, {
   timezone: 'America/Sao_Paulo',
 })
 
-console.log('[SETUP] Cron jobs initialized\n')
+console.log(
+  '[SETUP] Cron jobs initialized. Waiting for activation timestamps\n',
+)
