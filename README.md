@@ -7,7 +7,7 @@ Este projeto é uma aplicação Dockerizada em Node.js, desenvolvida com TypeScr
 
 ### Automação de Timers
 
-- A aplicação é configurada para rodar continuamente em um contêiner Docker.
+- A aplicação é configurada para rodar continuamente em um container Docker.
 - Utiliza a biblioteca `node-cron` para agendar tarefas que ocorrem em horários específicos durante a semana (de segunda a sexta-feira).
 
 ### Início dos Timers
