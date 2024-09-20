@@ -1,6 +1,6 @@
 # Automação de Timers no Monday.com
 
-Este projeto é uma aplicação Dockerizada em Node.js, desenvolvida com TypeScript, que automatiza a gestão de timers em boards do Monday.com. A aplicação visa facilitar o controle de tarefas e melhorar a eficiência do gerenciamento de tempo dentro da plataforma Monday.com.
+Este projeto é uma aplicação Dockerizada em Node.js, desenvolvida com TypeScript, que automatiza a gestão de timers em boards do Monday.com. A aplicação visa facilitar o controle de tarefas e melhorar a eficiência do gerenciamento de tempo dentro da plataforma.
 <br/><br/>
 
 ## Como Funciona
