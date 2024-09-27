@@ -68,7 +68,7 @@ export const stopBusinessHours = async (): Promise<void> => {
 
   const startTime = new Date() // Start timer
 
-  await alterBusinessHours(2)
+  await alterBusinessHours(5)
 
   const endTime = new Date() // End timer
   const duration = endTime.getTime() - startTime.getTime() // Calculate duration
