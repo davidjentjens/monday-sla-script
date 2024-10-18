@@ -22,6 +22,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} <<'ENDSSH'
           echo "SSH connection established"
           cd ${{ secrets.APP_PATH }}
+          git pull
           docker-compose down
           docker system prune -f
           docker-compose up -d
