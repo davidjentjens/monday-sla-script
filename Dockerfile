@@ -10,8 +10,6 @@ COPY package*.json ./
 # Step 4: Install dependencies
 RUN npm install
 
-RUN npm install rimraf -D
-
 # Step 5: Copy the rest of the application code
 COPY . .
 
