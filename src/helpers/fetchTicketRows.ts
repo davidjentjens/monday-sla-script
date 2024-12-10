@@ -7,7 +7,10 @@ export const fetchTicketRows = async (): Promise<Item[]> => {
   const query = `
       query {
         boards (ids: [${BOARD_ID}], limit: 1000) {
-          items_page (limit: 500) {
+          items_page(
+            limit: 500
+            query_params: {rules: [{column_id: "group", compare_value: ["topics", "group_title", "new_group36390", "new_group92987__1"]}]}
+          ) {
             items {
               id
               name
